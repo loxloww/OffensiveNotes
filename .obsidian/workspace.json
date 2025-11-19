@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "32ebc35f5b277184",
+        "id": "447aa2230f5f7ffa",
         "type": "tabs",
         "children": [
           {
-            "id": "f470ba15eb42a5dd",
+            "id": "fb86d5b5d02606ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "THM Path - Jr Pentester/10 - IDOR.md",
+                "file": "CPTS/Recap basis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10 - IDOR"
+              "title": "Recap basis"
             }
           }
         ]
@@ -166,8 +166,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "f470ba15eb42a5dd",
+  "active": "fb86d5b5d02606ea",
   "lastOpenFiles": [
+    "eJPT/02 - Linux - System & Host P.T.md",
+    "CPTS/Recap basis.md",
+    "CPTS/To Discover.md",
+    "THM Path - Jr Pentester/10 - IDOR.md",
+    "CPTS/Untitled",
+    "CPTS",
     "THM Path - Jr Pentester/09 - Auth Bypass.md",
     "THM Path - Jr Pentester/02 - Active recon.md",
     "THM Path - Jr Pentester/01 - Passive recon.md",
@@ -181,7 +187,6 @@
     "PT1/02 - AD/02 - AD basics.md",
     "eJPT/Services enumeration.md",
     "eJPT/Nmap.md",
-    "eJPT/02 - Linux - System & Host P.T.md",
     "eJPT/01 - Windows - System & Host P.T.md"
   ]
 }
