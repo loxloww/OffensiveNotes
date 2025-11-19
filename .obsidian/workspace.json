@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -166,27 +167,33 @@
       "bases:Create new base": false
     }
   },
-  "active": "fb86d5b5d02606ea",
+  "active": "a65c584d825f86a8",
   "lastOpenFiles": [
-    "eJPT/02 - Linux - System & Host P.T.md",
-    "CPTS/Recap basis.md",
     "CPTS/To Discover.md",
+    "CPTS/Recap basis.md",
+    "eJPT/04 - MSF.md",
+    "eJPT/06 - Post-exploitation.md",
+    "eJPT/03 - Network based attack.md",
+    "eJPT/01 - Windows - System & Host P.T.md",
     "THM Path - Jr Pentester/10 - IDOR.md",
+    "THM Path - Jr Pentester/06 - Protocols and Servers.md",
+    "THM Path - Jr Pentester/03 - NMAP - Live Host Discovery.md",
+    "eJPT/02 - Linux - System & Host P.T.md",
+    "eJPT/07 - Social engineering.md",
+    "eJPT/05 - Exploitation.md",
+    "PT1/02 - AD/01 - Windows basics.md",
+    "PT1/02 - AD/02 - AD basics.md",
+    "PT1/02 - AD/03 - Breaching AD.md",
+    "PT1/02 - AD/05 - Exploiting AD.md",
+    "PT1/02 - AD/07 - Lateral mouvement and pivoting.md",
+    "PT1/02 - AD/Pivoting.md",
     "CPTS/Untitled",
     "CPTS",
     "THM Path - Jr Pentester/09 - Auth Bypass.md",
     "THM Path - Jr Pentester/02 - Active recon.md",
     "THM Path - Jr Pentester/01 - Passive recon.md",
-    "THM Path - Jr Pentester/03 - NMAP - Live Host Discovery.md",
     "RootMe/Entretien à l_ANSSI.md",
-    "PT1/02 - AD/Pivoting.md",
-    "PT1/02 - AD/07 - Lateral mouvement and pivoting.md",
-    "PT1/02 - AD/05 - Exploiting AD.md",
-    "PT1/02 - AD/03 - Breaching AD.md",
-    "PT1/02 - AD/01 - Windows basics.md",
-    "PT1/02 - AD/02 - AD basics.md",
     "eJPT/Services enumeration.md",
-    "eJPT/Nmap.md",
-    "eJPT/01 - Windows - System & Host P.T.md"
+    "eJPT/Nmap.md"
   ]
 }

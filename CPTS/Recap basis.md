@@ -18,7 +18,7 @@ nmap -sC -sV -vv -p- -o output 10.129.42.253
 ```
 
 
-### Network attcks
+### Network attacks
 
 Banner grabbing
 ```bash
@@ -49,4 +49,62 @@ onesixtyone -c dict.txt 10.129.42.254
 
 ```
 
-`
+## Web enum
+
+#### Gobuster
+
+ #gobuster
+
+Directory and file enum
+
+```bash
+
+#dir mode
+gobuster dir -u http://10.10.10.121/ -w /usr/share/seclists/Discovery/Web-content/common.txt
+
+#dns - subdomain enum
+gobuster dns -d inlanefreight.com -w /usr/wordlists/seclists/Discovery/DNS/namelist.txt
+
+```
+
+banner grabbing Web server header
+
+```bash
+
+curl -IL https://www.inlanefreight.com
+
+#get version of web servers utilities/tools/sw
+whatweb 10.10.10.121
+
+```
+
+robots.txt
+look the source code : f12 or ctrl+U
+
+#### Upgrading TTY
+
+```bash
+
+python -c 'import pty; pty.spawn("/bin/bash")'
+^Z
+stty raw echo
+fg
+
+#from own device term
+echo $TERM
+#xterm-256color
+stty size
+#67 318
+
+#back to victim
+export TERM=xterm-256color
+stty rows 67 columns 318
+
+```
+
+web shell web root :
+
+IIS : C:\inetpub\wwwroot\
+apache : /var/www/html
+nginx : /usr/local/nginx/html
+xampp : C:\xampp\htdocs
