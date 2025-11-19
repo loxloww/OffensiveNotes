@@ -11,10 +11,14 @@
             "id": "f470ba15eb42a5dd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "THM Path - Jr Pentester/10 - IDOR.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "10 - IDOR"
             }
           }
         ]
@@ -162,6 +166,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "fcb70bf32e5e52e1",
-  "lastOpenFiles": []
+  "active": "f470ba15eb42a5dd",
+  "lastOpenFiles": [
+    "THM Path - Jr Pentester/09 - Auth Bypass.md",
+    "THM Path - Jr Pentester/02 - Active recon.md",
+    "THM Path - Jr Pentester/01 - Passive recon.md",
+    "THM Path - Jr Pentester/03 - NMAP - Live Host Discovery.md",
+    "RootMe/Entretien à l_ANSSI.md",
+    "PT1/02 - AD/Pivoting.md",
+    "PT1/02 - AD/07 - Lateral mouvement and pivoting.md",
+    "PT1/02 - AD/05 - Exploiting AD.md",
+    "PT1/02 - AD/03 - Breaching AD.md",
+    "PT1/02 - AD/01 - Windows basics.md",
+    "PT1/02 - AD/02 - AD basics.md",
+    "eJPT/Services enumeration.md",
+    "eJPT/Nmap.md",
+    "eJPT/02 - Linux - System & Host P.T.md",
+    "eJPT/01 - Windows - System & Host P.T.md"
+  ]
 }
