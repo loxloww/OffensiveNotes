@@ -4,6 +4,11 @@ TTL :
 - 64 = OS Linux
 - 128 = OS windows
 
+update NSE db
+```bash
+nmap --script-updatedb
+```
+
 
 Perform a full TCP port scan on your target and create an HTML report. Submit the number of the highest port as the answer.
 
@@ -40,7 +45,6 @@ sudo nmap 10.129.2.28 -n -Pn -p445 -O
 #filtered
 #use of diferent ip source
 sudo nmap 10.129.2.28 -n -Pn -p 445 -O -S 10.129.2.200 -e tun0
-
 
 ```
 
