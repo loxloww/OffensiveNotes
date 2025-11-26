@@ -123,3 +123,68 @@ pip3 install -r requirements.txt
 ./enum4linux-ng.py 10.129.14.128 -A
 
 ```
+
+#### NFS: 111,2049
+
+Network file system
+
+same purpose as SMB but for unix/linux system
+
+conf file : /etc/exports
+
+footprinting the service
+
+Port : 111 ad 2049
+
+```bash
+sudo nmap 10.129.14.128 -p111,2049 -sV -sC
+
+sudo nmap --script nfs* 10.129.14.128 -sV -p111,2049
+
+showmount -e 10.129.14.128
+
+mkdir target-NFS
+
+#-t for type
+#take all
+sudo mount -t nfs 10.129.14.128:/ ./target-NFS/ -o nolock
+#take specific : /var/nfs
+sudo mount -t nfs 10.129.107.124:/var/nfs ./1 -o nolock
+
+cd target-NFS
+tree .
+
+sudo umount ./target-NFS
+```
+
+#### DNS: 53
+
+local dns conf file : cat /etc/bind/named.conf.local
+
+Footprinting the service
+
+```bash
+
+dig ns inlanfreight.htb @10.129.147.184
+dig CH TXT version.bind 10.129.120.85
+
+#show all available records : dig any inlanefreight.htb @10.129.14.128
+
+dig axfr inlanefreight.htb @10.129.14.128
+dig axfr internal.inlanefreight.htb @10.129.14.128
+
+```
+
+Brute force subdomains
+#DNSenum
+```bash
+
+#bash
+for sub in $(cat /opt/useful/seclists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb @10.129.147.184 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
+
+#tool : DNSenum
+dnsenum --dnsserver 10.129.14.128 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/seclists/Discovery/DNS/subdomains-top1million-110000.txt inlanefreight.htb
+
+dnsenum --dnsserver 10.129.129.105 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/fierce-hostlist.txt dev.inlanefreight.htb
+
+```
